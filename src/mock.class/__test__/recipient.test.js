@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import Recipient from "../Recipient";
 
 describe("acceptInjection", () => {
@@ -6,7 +7,6 @@ describe("acceptInjection", () => {
   });
 
   test("should hasAntibodies be false if vaccine not contain Virus Proteins", () => {
-    // TODO 17: add test here
     jest.doMock("../covid19Vaccine", () => {
       return jest.fn().mockImplementation(() => {
         return {
@@ -24,7 +24,6 @@ describe("acceptInjection", () => {
   });
 
   test("should hasAntibodies be true if vaccine contain Virus Proteins", () => {
-    // TODO 18: add test here
     jest.doMock("../covid19Vaccine", () => {
       return jest.fn().mockImplementation(() => {
         return {
